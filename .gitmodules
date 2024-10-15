@@ -1,3 +1,6 @@
 [submodule "Digital Signal Processing/DSP-Lab"]
 	path = Digital Signal Processing/DSP-Lab
 	url = https://github.com/Jjateen/DSP-Lab.git
+[submodule "Reinforcement Learning/RoboticsLab"]
+	path = Reinforcement Learning/RoboticsLab
+	url = https://github.com/Jjateen/Robotics-Lab.git
