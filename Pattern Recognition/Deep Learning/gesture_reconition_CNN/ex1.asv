@@ -1,0 +1,12 @@
+clc;
+clear;
+imds = imageDatastore('dataset','IncludeSubFolders',true,...
+    'LabelSource','foldernames');
+[Traindata,Testdata] = splitEachLabel(imds,0.8);
+
+layers=[imageInputLayer([126 126 3])
+        convolution2dLayer(5,10)
+        reluLayer
+        maxPooling2dLayer(2, 'Stride', 2)
+        fullyConnectedLayer(10);
+
