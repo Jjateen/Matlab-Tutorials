@@ -1,0 +1,36 @@
+clc;clear;
+
+% M=24;%message
+
+fid = fopen('mesage.txt','r')
+F=fread(fid);
+Message=char(F');
+fclose(fid);
+Len=length(F);
+
+% M=str2num(M);
+P=11;
+Q=13;
+%E=7
+%N=143;
+% %D=103;
+% N=input('enter the value of N:'); % 
+% e=input('enter the value of e:'); %public key
+clc;
+%Encryption
+
+for i=1:Len
+
+ciphertext(i) = encryption(F(i),N,e);
+
+end
+disp('Cipher');
+disp(ciphertext);
+
+d=input('enter the value of d:');;%private key
+
+% Decryption
+Message = decryption(ciphertext,N,d);
+disp('Message');
+disp(Message);
+
